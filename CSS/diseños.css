@@ -1,0 +1,151 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fefefe;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/************************Header******************************/
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fefefe;
+    padding: 20px;
+    position: relative;
+}
+
+.caja1 {  
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+   background-color: #fefefe;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; /*Centrar los elementos*/
+}
+h1 { 
+    text-align: center;
+    flex-grow: 1; /* Ocupa espacio en el centro */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80px;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra al texto */
+}
+
+.imagen{
+    width: 380px;
+    height: 550px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    display: flex;
+    animation: desplazamiento-continuo 40s linear infinite;
+}
+.flex-container-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinear los elementos hacia la izquierda */
+    gap: 20px;
+    margin: 10px auto;
+    max-width: 1200px; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    overflow: hidden;
+}
+.titulo-superior {
+    position: absolute;
+    top: 170px; /* Ajusta la posición según sea necesario */
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 1.5em;
+    transform: rotate(0deg); 
+    transform-origin:top left ; /* Origen de rotación ajustado */
+    transition: transform 0.5s ease,left 0.5s ease, top 0.5s ease; /* Transición para la rotación */
+    font-size: 5rem;
+    padding: 5px 10px;
+    z-index: 2;
+}
+
+
+/*Barra de navegacion (Nav)*/
+nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+nav a {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 130px; /* Tamaño de los cuadritos del nav */
+    height: 90px;
+    border-radius: 30px;
+    color: #140101;
+    font-size: 20px; 
+    font-weight: bold; /* Negrita */
+    text-decoration: none; /* Elimina el subrayado */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transición suave */
+    text-align: center;
+    transform: translateY(-3px); /* Efecto flotante */
+    background-color: #a3a2a2;
+    
+}
+
+
+/*animacion para imagenes adicionales*/
+@keyframes desplazamiento-continuo {
+    0% {
+        transform: translateX(0); /* Posición inicial */
+    }
+    100% {
+        transform: translateX(calc(-100% * 5)); /* Mover todas las imágenes hacia la izquierda */
+    }
+}
+
+@keyframes desplazamiento-continuo-EjeY {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    100% {
+        transform: translateY(calc(-100% * 5)); /* Mover todas las imágenes hacia arriba */
+    }
+}
+
+
+/*****************************************************************************************************************/
+
+.flex-container-2 {
+    display: flex;
+    flex-direction: column; /* Organiza las imágenes en columna */
+    align-items: left; /* Centra las imágenes horizontalmente */
+    justify-content: center; /* Centra las imágenes verticalmente en el contenedor */
+    gap: 20px; /* Espacio entre las imágenes */
+    height: 100%; /* Altura del contenedor igual a la ventana */
+    margin-left: 18%;
+}
+
+.imagen2 {
+    width: 150px;
+    height: 200px;
+    object-fit: cover; /* Ajusta las imágenes para que no se deformen */
+    border-radius: 10%;
+}
+/*****************************************************************************************************************/
+
